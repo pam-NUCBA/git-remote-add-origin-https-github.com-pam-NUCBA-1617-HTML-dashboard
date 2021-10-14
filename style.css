@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 * {
   margin: 0;
@@ -15,7 +16,9 @@ body {
           flex-direction: column;
 }
 
-p, h2, h1 {
+p,
+h2,
+h1 {
   color: silver;
   font-family: "Roboto", sans-serif;
 }
@@ -83,12 +86,196 @@ h2 {
 }
 
 .asideSection li::before {
-  content: "\25BD" "\2615";
+  content: "▽" "☕";
   margin-right: 2%;
+}
+
+.asideSection li:hover {
+  color: #dbd8d8;
+  cursor: pointer;
+  font-weight: 400;
 }
 
 .bodySection {
   margin-left: 20%;
   width: 80%;
+}
+
+.bodySection nav {
+  background-color: #4b4b4b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.bodySection nav h1 {
+  color: silver;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-left: 3%;
+}
+
+.bodySection nav i {
+  margin-right: 5px;
+}
+
+.bodySection nav i.hamburger, .bodySection nav i.smallOnly {
+  display: none;
+}
+
+.bodySection nav li {
+  color: silver;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  display: inline;
+  margin-right: 20px;
+}
+
+.bodySection nav li:hover {
+  color: #dbd8d8;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.bodySection main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bodySection main .infoSection img {
+  border-radius: 20px;
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.bodySection main .infoSection.cardsContainer {
+  display: block;
+}
+
+.bodySection main .infoSection.cardsContainer .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 5% 0;
+}
+
+.bodySection main .infoSection.cardsContainer .cards .card {
+  max-width: 18rem;
+  margin: 0 1%;
+}
+
+.bodySection main .bigSection {
+  max-height: 600px;
+  margin-bottom: 10%;
+}
+
+.bodySection main .bigSection img {
+  margin-top: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 20%;
+  width: 100%;
+  background-color: rgba(70, 70, 70, 0.178);
+}
+
+footer p {
+  margin-left: 5%;
+  font-size: 1.2em;
+}
+
+footer p::after {
+  content: "\2764";
+  color: red;
+}
+
+@media (max-width: 1280px) {
+  .bodySection main .infoSection {
+    margin: 2% 0;
+  }
+  .bodySection main .infoSection.cardsContainer .cards .card {
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .asideSection {
+    display: none;
+    width: 35%;
+    position: fixed;
+    background-color: rgba(70, 70, 70, 0.178);
+    top: 5%;
+    z-index: 5;
+  }
+  .bodySection {
+    margin-left: 0;
+    width: 100%;
+  }
+  .bodySection nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bodySection nav i.hamburger,
+  .bodySection nav i.smallOnly {
+    display: block;
+    color: darkgray;
+    font-size: 1.5em;
+    padding: 0 2%;
+    cursor: pointer;
+  }
+  .bodySection nav ul {
+    display: none;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #4b4b4b;
+    right: 4%;
+    top: 7%;
+    text-align: end;
+  }
+  .bodySection nav ul li {
+    padding-top: 3%;
+  }
+  .bodySection main .bigSection img {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  footer {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

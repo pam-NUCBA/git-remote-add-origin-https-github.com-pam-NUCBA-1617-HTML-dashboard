@@ -18,10 +18,10 @@
 
 <body>
     <!-- aside -->
-    <aside class="asideSection">
-        <img src="./assets/userIcon.png" alt="">
+    <aside class="asideSection" id="panel">
+        <img src="./assets/userIcon.png" alt="" class="mt-5">
         <h2>Juan Perez</h2>
-        <p>Admin del sitio</p>
+        <p class="p-3">Admin del sitio</p>
         <hr>
         <label>
             <input type="text" placeholder="buscar">
@@ -43,8 +43,11 @@
     <section class="bodySection">
         <header>
             <nav>
-                <h1>Dashboard de Admin</h1>
-                <ul>
+                <!-- todo: aca va a ir el ícono -->
+                <i class="fas fa-cogs smallOnly" id="showPanel"></i>
+                <h1 id="title">Dashboard de Admin</h1>
+                <i class="fas fa-bars hamburger" id="showList"></i>
+                <ul id="list">
                     <li>User</li>
                     <li>Messages</li>
                     <li>Alerts</li>
@@ -54,25 +57,90 @@
         </header>
 
         <main>
-            <article class="infoSection">
+            <article class="infoSection mt-4">
                 <img src="./assets/elements/01.jpg" alt="">
             </article>
-            <article class="infoSection">
+            <article class="infoSection mt-4">
                 <img src="./assets/elements/02.jpg" alt="">
             </article>
-            <article class="infoSection">
+            <article class="infoSection mt-4">
                 <img src="./assets/elements/03.jpg" alt="">
             </article>
-            <article class="infoSection">
+            <article class="infoSection mt-4">
                 <img src="./assets/elements/04.jpg" alt="">
             </article>
-            <article class="infoSection">
+            <article class="infoSection mt-4">
                 <img src="./assets/elements/05.jpg" alt="">
             </article>
-            <article>
-                <!-- cards toDo  -->
+            <article class="infoSection cardsContainer">
+                <div class="cards">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Primary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Secondary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Danger card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-dark bg-warning mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Warning card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-dark bg-info mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Info card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-dark bg-light mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dark card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
             </article>
-            <article class="bigSection">
+            <article class="bigSection mt-5">
                 <img src="./assets/elements/06.png" alt="">
             </article>
         </main>
@@ -80,7 +148,7 @@
 
     <!-- footer -->
     <footer>
-        <p>Hecho por Pam para Nucba</p>
+        <p>Hecho por Pam para Nucba con </p>
     </footer>
 
 
